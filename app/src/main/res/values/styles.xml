@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Lsd" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/panel</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:textColorSecondary">@color/subtext</item>
+        <item name="android:textColorHint">@color/hint</item>
+        <item name="android:colorControlNormal">@color/subtext</item>
+        <item name="android:colorControlActivated">@color/accent</item>
+        <item name="android:colorButtonNormal">@color/selected</item>
+        <item name="android:alertDialogTheme">@style/LsdDialog</item>
+        <item name="android:popupMenuStyle">@style/LsdPopupMenu</item>
+    </style>
+
+    <!-- AlertDialog (info, delete, copy/move, sort, search, create...) -->
+    <style name="LsdDialog" parent="android:Theme.Material.Dialog.Alert">
+        <item name="android:colorBackground">@color/dialog</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:textColorSecondary">@color/text</item>
+        <item name="android:textColorAlertDialogListItem">@color/text</item>
+        <item name="android:textColorHint">@color/hint</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:colorControlNormal">@color/subtext</item>
+        <item name="android:colorControlActivated">@color/accent</item>
+    </style>
+
+    <!-- 3-dot / hamburger popup menus -->
+    <style name="LsdPopupMenu" parent="android:Widget.Material.PopupMenu">
+        <!-- Use the platform popup background so this style has no optional drawable dependency. -->
+    </style>
+
+    <style name="IconBtn">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:tint">@color/icon</item>
+    </style>
+
+    <style name="BarBtn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:tint">@color/icon</item>
+    </style>
+
+    <style name="SelBtn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/icon</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:drawableTint">@color/icon</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+</resources>

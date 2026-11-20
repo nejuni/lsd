@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/panel"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/header"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <ImageButton
+                android:id="@+id/btnMenu"
+                style="@style/IconBtn"
+                android:contentDescription="Menu"
+                android:src="@drawable/ic_menu" />
+
+            <LinearLayout
+                android:id="@+id/pathBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pathText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="start"
+                    android:maxLines="1"
+                    android:textColor="@color/text"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/infoText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/subtext"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnMore"
+                style="@style/IconBtn"
+                android:contentDescription="More"
+                android:src="@drawable/ic_more" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/indLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:overScrollMode="never" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/indRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:overScrollMode="never" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/permPanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/panel"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="lsd needs All files access to browse, copy and move your files."
+                android:textColor="@color/text"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnGrant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Grant access" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bar">
+
+        <LinearLayout
+            android:id="@+id/barNav"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                style="@style/BarBtn"
+                android:contentDescription="Back"
+                android:src="@drawable/ic_back" />
+
+            <ImageButton
+                android:id="@+id/btnFwd"
+                style="@style/BarBtn"
+                android:contentDescription="Forward"
+                android:src="@drawable/ic_forward" />
+
+            <ImageButton
+                android:id="@+id/btnAdd"
+                style="@style/BarBtn"
+                android:contentDescription="New file or folder"
+                android:src="@drawable/ic_add" />
+
+            <ImageButton
+                android:id="@+id/btnSwap"
+                style="@style/BarBtn"
+                android:contentDescription="Show this folder in the other pane"
+                android:src="@drawable/ic_swap" />
+
+            <ImageButton
+                android:id="@+id/btnUp"
+                style="@style/BarBtn"
+                android:contentDescription="Up"
+                android:src="@drawable/ic_up" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/barSel"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/btnCopy"
+                style="@style/SelBtn"
+                android:drawableTop="@drawable/ic_copy"
+                android:text="Copy" />
+
+            <TextView
+                android:id="@+id/btnCut"
+                style="@style/SelBtn"
+                android:drawableTop="@drawable/ic_cut"
+                android:text="Cut" />
+
+            <TextView
+                android:id="@+id/btnAll"
+                style="@style/SelBtn"
+                android:drawableTop="@drawable/ic_select_all"
+                android:text="All" />
+
+            <TextView
+                android:id="@+id/btnCancel"
+                style="@style/SelBtn"
+                android:drawableTop="@drawable/ic_close"
+                android:text="Cancel" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

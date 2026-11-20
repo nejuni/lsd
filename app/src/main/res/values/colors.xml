@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Gruvbox dark palette -->
+<resources>
+    <color name="header">#1D2021</color>      <!-- bg0_h -->
+    <color name="panel">#282828</color>       <!-- bg0   -->
+    <color name="bar">#1D2021</color>         <!-- bg0_h -->
+    <color name="divider">#1D2021</color>     <!-- bg0_h -->
+    <color name="tile">#1D2021</color>        <!-- bg0_h -->
+    <color name="text">#EBDBB2</color>        <!-- fg1   -->
+    <color name="subtext">#A89984</color>     <!-- fg4   -->
+    <color name="icon">#D5C4A1</color>        <!-- fg2   -->
+    <color name="selected">#504945</color>    <!-- bg2   -->
+    <color name="accent">#FABD2F</color>      <!-- bright yellow -->
+    <color name="folder">#FABD2F</color>      <!-- bright yellow -->
+    <color name="file">#EBDBB2</color>        <!-- fg1   -->
+    <color name="dialog">#3C3836</color>      <!-- bg1   -->
+    <color name="hint">#7C6F64</color>        <!-- bg4   -->
+    <color name="syntax_keyword">#FB4934</color>
+    <color name="syntax_string">#B8BB26</color>
+    <color name="syntax_comment">#928374</color>
+    <color name="syntax_number">#D3869B</color>
+    <color name="syntax_function">#FABD2F</color>
+    <color name="syntax_operator">#8EC07C</color>
+</resources>

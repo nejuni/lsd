@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">lsd</string>
+    <string name="share_label">Send to lsd</string>
+    <string name="open_label">Copy to lsd temp</string>
+</resources>
